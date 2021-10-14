@@ -1,4 +1,5 @@
 ---
+import ReactCounter from '../components/ReactCounter.jsx';
 let title = 'My Astro Site';
 ---
 <html lang="en">
@@ -28,6 +29,9 @@ let title = 'My Astro Site';
                 <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
             </div>
         </header>
+        <div>
+            <ReactCounter:visible />
+        </div>
     </main>
 </body>
 </html>
