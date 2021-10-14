@@ -9,7 +9,7 @@ const ReactCounter = () => {
 
   return (
     <div>
-      <h1>React count = {count}</h1>
+      <h2>React count = {count}</h2>
       <button onClick={add}>+</button>
       <button onClick={subtract}>-</button>
       <button onClick={reset}>reset</button>
