@@ -1,0 +1,31 @@
+<h2 class="counter-display">Astro count = 0</h2>
+<button class="counter-plus">+</button>
+<button class="counter-minus">-</button>
+<button class="counter-reset">reset</button>
+
+<script>
+    let count = 0;
+    let counterDisplayElem = document.querySelector('.counter-display');
+    let counterMinusElem = document.querySelector('.counter-minus');
+    let counterPlusElem = document.querySelector('.counter-plus');
+    let counterResetElem = document.querySelector('.counter-reset');
+
+    const updateDisplay = () => {
+        counterDisplayElem.innerHTML = `Astro count = ${count}`
+    }
+
+    counterPlusElem.addEventListener("click",() =>{
+        count++;
+        updateDisplay()
+    })
+
+    counterMinusElem.addEventListener("click",() =>{
+        count--;
+        updateDisplay()
+    })
+
+    counterResetElem.addEventListener("click",() =>{
+        count = 0;
+        updateDisplay()
+    })
+</script>

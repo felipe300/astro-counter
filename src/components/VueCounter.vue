@@ -1,7 +1,7 @@
 <template>
   <h2>Vue count = {{ count }}</h2>
-  <button @click="subtract">-</button>
   <button @click="add">+</button>
+  <button @click="subtract">-</button>
   <button @click="reset">reset</button>
 </template>
 
@@ -9,11 +9,11 @@
 export default {
   name: 'VueCounter',
   props: {
-    demo: String,
+    demo: String
   },
   data() {
     return {
-      count: 0,
+      count: 0
     }
   },
   methods: {
@@ -25,8 +25,8 @@ export default {
     },
     reset() {
       this.count = 0
-    },
-  },
+    }
+  }
 }
 </script>
 

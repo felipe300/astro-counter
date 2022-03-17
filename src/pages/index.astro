@@ -1,42 +1,13 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro'
 import SvelteCounter from '../components/SvelteCounter.svelte';
 import ReactCounter from '../components/ReactCounter.jsx';
 import VueCounter from '../components/VueCounter.vue';
-
-let title = 'My Astro Site';
+import AstroCounter from '../components/AstroCounter.astro';
 ---
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>{title}</title>
-
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    
-    <link rel="stylesheet" href="/style/global.css">
-    <link rel="stylesheet" href="/style/home.css">
-
-    <style>
-        header {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            max-width: min(100%, 68ch);
-        }
-    </style>
-</head>
-<body>
-    <main>
-        <header>
-            <div>
-                <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-            </div>
-        </header>
-        <div>
-            <ReactCounter client:visible />
-            <VueCounter client:visible />
-            <SvelteCounter client:visible />
-        </div>
-    </main>
-</body>
-</html>
+<BaseLayout title="My Astro counter">
+    <AstroCounter client:visible />
+    <ReactCounter client:visible />
+    <VueCounter client:visible />
+    <SvelteCounter client:visible />
+</BaseLayout>
